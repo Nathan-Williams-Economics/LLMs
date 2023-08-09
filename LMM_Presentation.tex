@@ -1,0 +1,197 @@
+\documentclass[aspectratio=43]{beamer}
+\usepackage[
+    backend=biber,
+    style=authoryear,
+  ]{biblatex}
+
+
+% Title --------------------------------------------
+\title{LLMs: Applications to Economics Research}
+\date{\today}
+\author{Nathan Williams}
+\input{format_beamer_slides.sty}
+\begin{document}
+%---------------------------------------------------
+\begin{frame}
+\maketitle
+\end{frame}
+%---------------------------------------------------
+\section{Introduction}
+%---------------------------------------------------
+\begin{frame}{Why are we talking about AI and Research?}
+    The proliferation of AI applications and Large Language Models for academic research has increased drastically in the schools.
+    \begin{figure}
+        \centering
+        \includegraphics{News Screeenshot 1.png}
+        \label{News Article}
+    \end{figure}
+\end{frame}
+%-------------------------------------------------
+\begin{frame}{Professors are having trouble too!}
+    
+\end{frame}
+%-------------------------------------------------
+\begin{frame}{Artificial Intelligence Platforms}
+    The popularity of ChatGPT and OpenAI has led to the proliferation of many AI platforms
+    \begin{itemize}
+        \item Llama (Meta Product)
+        \item StableLM
+        \item Pythia
+        \item BloombergGPT
+    \end{itemize}
+    This space is growing so quickly that there will likely be one announced over the course of this presentation.
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Using AI in Research}
+    Using generated work in research can be very dangerous for the following reasons:
+    \begin{itemize}
+        \item Incorrect Information
+        \item Plagiarism
+    \end{itemize}
+    The goal of this talk is to minimize the risks of either of these issues arising. 
+\end{frame}
+%----------------------------------------------
+\begin{frame}{Skills Covered Here}
+    Key applications will be covered in this lecture with respect to two skills:
+    \begin{itemize}
+        \item Coding
+        \item Writing
+    \end{itemize}
+    This lecture will focus on using ChatGPT, but this can be broadly applied.
+\end{frame}
+%-----------------------------------------------
+\section{General Rules of Thumb}
+%-----------------------------------------------
+\begin{frame}{General Rule of Thumb}\label{Rule of Thumb}
+    LLMs tend to do worse at generating original material, as they tend to make things up if not properly prompted.
+    \bigbreak 
+    \begin{block}{Rule of Thumb}
+        Avoid having an LLM generate its own work, use it to enhance your already existing work
+    \end{block}
+\end{frame}
+%-----------------------------------------------
+\begin{frame}{Construction of Queries}
+    Every time a query is constructed, think of choosing a set of additional information such that the probability of a correct answer is maximized. There are a few key aspects that consistently improve the outputs of LLMs. 
+    \begin{itemize}
+        \item Writing clear text
+        \item Prompt Structure
+    \end{itemize}
+\end{frame}
+%----------------------------------------------
+\begin{frame}{Basic Prompt Structure (\href{https://www.promptingguide.ai/introduction/basics}{Source})}\label{Prompt Structure}
+    A well-structured prompt can have up to 4 key elements. These are not all needed but can be valuable in answering more complicated questions. 
+    \begin{itemize}
+        \item Instruction
+        \item Context
+        \item Input Data
+        \item Output Data
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------
+\begin{frame}{Some Other Key Prompt Approaches (\href{https://www.promptingguide.ai/introduction/basics}{Source})}
+    Many of the standard rules of thumb for Google searches often apply here:
+    \begin{itemize}
+        \item Specificity
+        \item Start Smaller
+        \item Avoid Impreciseness
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------
+\section{Coding}
+%-----------------------------------------------
+\begin{frame}{Coding in LLMs}
+    The largest efficiency gain for researchers comes from LLM's coding ability. 
+    \begin{itemize}
+        \item Writing Code
+        \item Interpreting Errors
+        \item Streamlining Speed
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------
+\begin{frame}{LLMs are not equally helpful}
+    \begin{figure}
+        \centering
+        \includegraphics{Availability of Results on Internet.png}
+    \end{figure}
+\end{frame}
+%-----------------------------------------------
+\begin{frame}{Interpreting Errors}
+    One of the most powerful tools LLMs can be used for is interpreting errors. Simply copy and paste your error into the interface window.
+
+    \bigbreak 
+    This is not a substitute to StackOverflow, but rather a compliment.
+\end{frame}
+%-----------------------------------------------
+\begin{frame}{Prompt Strategy - Interpreting and Fixing Errors}
+    A better way to interpret errors can be borrowed from the \alert{prompt engineering} literature:
+    \begin{enumerate}
+        \item Set up the \hyperlink{Prompt Structure}{prompting environment}
+        \item Include both your code and your error
+        \item Ask the LLM to explain the error in the context of your code in the \alert{Output Data} section
+    \end{enumerate}
+\end{frame}
+%-----------------------------------------------
+\begin{frame}{Streamlining Speed}
+    In every subfield of economics, there exists simulations that can take a very long time (days to weeks). Small coding optimizations can take a project that takes weeks to simulate and move it to days. 
+    \begin{itemize}
+        \item Microeconomics (Bootstrapping)
+        \item Macroeconomics (Model Estimation)
+        \item Econometrics (Bootstrapping)
+    \end{itemize}
+    \bigbreak 
+    ChatGPT and other LLMs are very good at finding these tiny optimizations! 
+\end{frame}
+%-----------------------------------------------
+\begin{frame}{Prompt Strategy - Speeding Up Code}
+    \begin{enumerate}
+        \item Set up the \hyperlink{Prompt Structure}{prompting environment}
+        \item Include your code in the \alert{Context} section
+        \item Ask the LLM to find ways to optimize your code
+    \end{enumerate}
+\end{frame}
+%-----------------------------------------------
+\begin{frame}{Generating New Code}
+    Per the \hyperlink{Rule of Thumb}{Rule of Thumb Slide}, it is a good idea to avoid an LLM generating all code for a few key reasons:
+    \begin{itemize}
+        \item The LLM may hallucinate packages or commands, especially as the program has less active resources on the internet (read: \alert{Stata}) 
+        \item The prompt and structure must be very specific
+        \item You still have to know what the code does! 
+        \item Certain people may construe this as academic dishonesty
+    \end{itemize}
+    \alert{It is in your best interest not to do this.}
+\end{frame}
+%-----------------------------------------------
+\section{Writing}
+%-----------------------------------------------
+\begin{frame}{LLMs are editors, not writers}
+    Unlike with code, using an LLM to write for you is \alert{academic dishonesty} and you should not do it ever. 
+
+    \bigbreak
+    However, there are some uses for ChatGPT with writing that are both largely permissible and can serve to help you in your own writing.
+\end{frame}
+%----------------------------------------------
+\begin{frame}{Why use an LLM to edit work?}
+    One of the most popular strategies of editing is reading your work aloud to a friend (or yourself, no judgement). 
+    This helps discern the quirks of your \alert{voice} that you otherwise might not see.
+
+    \bigbreak
+    If you don't have friends, ChatGPT and other LLMs can serve this purpose.
+\end{frame}
+%----------------------------------------------
+\begin{frame}{Prompt Strategy - Editing Documents}
+    \begin{itemize}
+        \item Set up the \alert{prompting environment}, make sure the LLM knows it is an editor and not a writer
+        \item Paste a section of the document that you would like to be edited and ask ChatGPT to edit it
+    \end{itemize}
+\end{frame}
+%----------------------------------------------
+\section{Conclusion}
+%----------------------------------------------
+\begin{frame}{LLMs and ChatGPT}
+    Both are powerful, but dangerous tools in the research process. Please use caution when using. 
+    \bigbreak
+    
+    If you have any questions, come see Hanna or Nathan and we will help you :)
+\end{frame}
+%----------------------------------------------
+\end{document}
